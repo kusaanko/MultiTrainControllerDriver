@@ -1,0 +1,3 @@
+ddk_make/x86
+ddk_make/x64
+*.log
