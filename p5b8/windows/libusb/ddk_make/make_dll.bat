@@ -22,5 +22,5 @@ ECHO [%0] WinDDK build failed (%BUILD_ALT_DIR%)
 EXIT /B 1
 
 :BUILD_SUCCESS
-if exist libusb0.lib move /Y libusb0.lib libusb.lib >NUL
+if exist libusb0-mtcp5b8.lib move /Y libusb0-mtcp5b8.lib libusb-mtcp5b8.lib >NUL
 :BUILD_DONE

@@ -526,6 +526,12 @@ void usb_fetch_and_parse_descriptors(usb_dev_handle *udev)
 
         usb_parse_descriptor(buffer, "bbw", &config);
 
+        // Fix wrong wTotalLength for MultiTrainController P5B8
+        if (dev->descriptor.idProduct == 0x0AE4 && dev->descriptor.idProduct == 0x0004 && dev->descriptor.bcdDevice == 0x0100)
+        {
+            config.wTotalLength = 0x19;
+        }
+
         bigbuffer = malloc(config.wTotalLength);
         if (!bigbuffer)
         {

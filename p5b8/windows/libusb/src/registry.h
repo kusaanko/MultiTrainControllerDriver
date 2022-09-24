@@ -26,8 +26,8 @@
 #include <setupapi.h>
 
 
-#define LIBUSB_DRIVER_NAME_NT "libusb0"
-#define LIBUSB_DRIVER_NAME_9X "libusb0.sys"
+#define LIBUSB_DRIVER_NAME_NT "libusb0-mtcp5b8"
+#define LIBUSB_DRIVER_NAME_9X "libusb0-mtcp5b8.sys"
 
 typedef int bool_t;
 

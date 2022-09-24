@@ -739,6 +739,9 @@ find_interface_desc(USB_CONFIGURATION_DESCRIPTOR *config_desc,
     char *p = (char *)desc;
     USB_INTERFACE_DESCRIPTOR *if_desc = NULL;
 
+	// Fix wrong MultiTrainControllerP5B8 wTotalLength 0x29 to 0x19
+	// This is most important code
+	config_desc->wTotalLength = 0x19;
     if (!config_desc || (size < config_desc->wTotalLength))
         return NULL;
 
@@ -784,6 +787,9 @@ USB_INTERFACE_DESCRIPTOR* find_interface_desc_ex(USB_CONFIGURATION_DESCRIPTOR *c
     if (!config_desc)
         return NULL;
 
+	// Fix wrong MultiTrainControllerP5B8 wTotalLength 0x29 to 0x19
+	// This is most important code
+	config_desc->wTotalLength = 0x19;
 	size = size > config_desc->wTotalLength ? config_desc->wTotalLength : size;
 
     while (size && desc->length <= size)

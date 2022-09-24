@@ -117,6 +117,11 @@ NTSTATUS get_descriptor(libusb_device_t *dev,
 			goto Done;
 		}
 
+		// Fix wrong MultiTrainControllerP5B8 wTotalLength 0x28 to 0x19
+		if (((PUSB_CONFIGURATION_DESCRIPTOR)buffer)->wTotalLength == 0x28) {
+			((PUSB_CONFIGURATION_DESCRIPTOR)buffer)->wTotalLength = 0x19;
+		}
+		
 		// this is a config descriptor request.
 		if (!dev->config.descriptor || dev->config.index != index)
 		{
@@ -247,6 +252,11 @@ PUSB_CONFIGURATION_DESCRIPTOR get_config_descriptor(
             USBERR0("getting configuration descriptor failed\n");
             break;
         }
+
+		// Fix wrong MultiTrainControllerP5B8 wTotalLength 0x29 to 0x19
+		if (desc->wTotalLength == 0x29) {
+			desc->wTotalLength = 0x19;
+		}
 
 		// if value is negative, get the descriptor by index
 		// if positive, get it by value.

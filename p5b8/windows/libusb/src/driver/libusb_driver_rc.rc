@@ -19,7 +19,7 @@
 #define RC_FILE_TYPE      VFT_DRV
 #define RC_FILE_SUB_TYPE  VFT2_DRV_SYSTEM
 #define RC_PRODUCT_STR    "LibUSB-Win32 - Kernel Driver"
-#define RC_FILE_NAME_STR  "libusb0.sys"
+#define RC_FILE_NAME_STR  "libusb0-mtcp5b8.sys"
 
 #include "libusb-win32_version.rc"
 

@@ -164,8 +164,9 @@ int usb_find_devices(void)
             /*
              * Some ports fetch the descriptors on scanning (like Linux) so we don't
              * need to fetch them again.
+             * If device is MultiTrainControllerP5B8, retry parse descriptors.
              */
-            if (!dev->config)
+            if (!dev->config || (dev->descriptor.idProduct == 0x0AE4 && dev->descriptor.idProduct == 0x0004 && dev->descriptor.bcdDevice == 0x0100))
             {
                 usb_dev_handle *udev;
 

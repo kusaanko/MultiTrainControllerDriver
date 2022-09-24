@@ -22,7 +22,7 @@
 
 #include "usb.h"
 
-#define LIBUSB_DLL_NAME "libusb0.dll"
+#define LIBUSB_DLL_NAME "libusb0-mtcp5b8.dll"
 
 
 typedef usb_dev_handle * (*usb_open_t)(struct usb_device *dev);

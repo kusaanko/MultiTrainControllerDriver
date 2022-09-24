@@ -17,7 +17,7 @@ IF EXIST "build%BUILD_ALT_DIR%.err" DEL /Q "build%BUILD_ALT_DIR%.err" >NUL
 IF EXIST "build%BUILD_ALT_DIR%.wrn" DEL /Q "build%BUILD_ALT_DIR%.wrn" >NUL
 SET BUILD_ERRORLEVEL=0
 
-if exist libusb0.lib move /Y libusb0.lib libusb.lib >NUL
+if exist libusb0-mtcp5b8.lib move /Y libusb0-mtcp5b8.lib libusb-mtcp5b8.lib >NUL
 
 build -cwgZ 2>NUL>NUL
 IF EXIST "build%BUILD_ALT_DIR%.err" TYPE "build%BUILD_ALT_DIR%.err"

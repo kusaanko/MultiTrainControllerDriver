@@ -46,8 +46,8 @@
 
 #define DISP_CLASS(FilterClass) (strlen(FilterClass->class_name) ? FilterClass->class_name : FilterClass->class_guid)
 
-static const char *driver_name_nt = "libusb0";
-static const char *driver_name_9x = "libusb0.sys";
+static const char *driver_name_nt = "libusb0-mtcp5b8";
+static const char *driver_name_9x = "libusb0-mtcp5b8.sys";
 
 static const char *default_class_keys_nt[] =
 {

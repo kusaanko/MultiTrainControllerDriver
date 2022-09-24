@@ -19,7 +19,7 @@
 #define RC_FILE_TYPE      VFT_DLL
 #define RC_FILE_SUB_TYPE  VFT2_UNKNOWN
 #define RC_PRODUCT_STR    "libusb-win32 - DLL"
-#define RC_FILE_NAME_STR  "libusb0.dll"
+#define RC_FILE_NAME_STR  "libusb0-mtcp5b8.dll"
 
 #include "libusb-win32_version.rc"
 

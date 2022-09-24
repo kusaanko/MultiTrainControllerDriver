@@ -49,7 +49,7 @@
 #include "libusb-win32_version.h"
 
 
-#define LIBUSB_DRIVER_PATH  "system32\\drivers\\libusb0.sys"
+#define LIBUSB_DRIVER_PATH  "system32\\drivers\\libusb0-mtcp5b8.sys"
 #define LIBUSB_OLD_SERVICE_NAME_NT "libusbd"
 
 #define INSTALLFLAG_FORCE 0x00000001
