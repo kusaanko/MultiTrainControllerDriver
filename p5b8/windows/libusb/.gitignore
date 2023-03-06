@@ -1,3 +1,8 @@
 ddk_make/x86
 ddk_make/x64
 *.log
+*.cer
+*.dll
+*.sys
+*.exe
+*.cat
